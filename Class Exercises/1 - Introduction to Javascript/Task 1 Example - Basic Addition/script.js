@@ -7,7 +7,7 @@ function addNumbers() {
         document.getElementById('result').textContent = "Please enter valid numbers!";
     } else {
         const sum = num1 + num2;
-        document.getElementById('result').textContent = `The sum is: ${sum}`;
+        document.getElementById('average').textContent = `The sum is: ${sum}`;
     }
 }
 
