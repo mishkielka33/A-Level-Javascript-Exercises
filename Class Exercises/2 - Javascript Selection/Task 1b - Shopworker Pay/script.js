@@ -9,14 +9,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Function to calculate the worker's pay
 function calculatePay() {
+    let wage = 0
     // TODO: Get the age and hours worked from the input fields
     let age = parseFloat(document.getElementById('age').value);
     let hours = parseFloat(document.getElementById('hours').value);
     // TODO: Set the hourly rate based on age (£4.85 for under 18, £6.35 for 18 and over)
     if (age < 18) {
-        let wage = hours * 4.85
+        wage = hours * 4.85
     } else {
-        let wage = hours * 6.35
+        wage = hours * 6.35
     }
     // TODO: Calculate total pay
     // TODO: Display the hours worked and total amount earned
