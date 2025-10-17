@@ -10,7 +10,7 @@ let top = -1; // Index of the top element
 // --- Push operation ---
 function push(value) {
   // TODO: Fill in the blanks to complete the push logic
-  if (___________) {
+  if (topIndex >= STACK_LIMIT - 1) {
     // Stack is full
     return -1;
   } else {

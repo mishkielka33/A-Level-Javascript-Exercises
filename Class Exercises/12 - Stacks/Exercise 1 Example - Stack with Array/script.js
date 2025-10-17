@@ -5,37 +5,37 @@
 // --- Stack setup ---
 const STACK_LIMIT = 10; // Maximum stack size
 const stack = [];
-let top = -1; // Index of the top element
+let topIndex = -1; // Index of the top element
 
 function push(value) {
 // --- Push operation ---
-  if (top >= STACK_LIMIT - 1) {
+  if (topIndex >= STACK_LIMIT - 1) {
     // Stack is full
     return -1;
   } else {
-    top = top + 1;
-    stack[top] = value;
-    return top;
+    topIndex = topIndex + 1;
+    stack[topIndex] = value;
+    return topIndex;
   }
 }
 
 function pop() {
 // --- Pop operation ---
-  if (top === -1) {
+  if (topIndex === -1) {
     // Stack is empty
     return -1;
   } else {
-    var popped = stack[top];
-    stack[top] = undefined;
-    top = top - 1;
+    var popped = stack[topIndex];
+    stack[topIndex] = undefined;
+    topIndex = topIndex - 1;
     return popped;
   }
 }
 
 function peek() {
 // --- Peek operation ---
-  if (top >= 0) {
-    return stack[top];
+  if (topIndex >= 0) {
+    return stack[topIndex];
   } else {
     return -1;
   }
@@ -44,18 +44,18 @@ function peek() {
 function clear() {
 // --- Clear operation ---
   var i = 0;
-  while (i <= top) {
+  while (i <= topIndex) {
     stack[i] = undefined;
     i = i + 1;
   }
-  top = -1;
+  topIndex = -1;
 }
 
 function updateOutput() {
 // --- Display stack contents ---
   var contents = [];
   var i = 0;
-  while (i <= top) {
+  while (i <= topIndex) {
     contents.push(stack[i]);
     i = i + 1;
   }

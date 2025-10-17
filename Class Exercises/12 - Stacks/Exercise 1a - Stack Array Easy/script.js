@@ -1,43 +1,46 @@
 // =============================
 // Stack implemented with an array (manual push/pop)
 // =============================
+document.addEventListener("DOMContentLoaded", function(){
+
+});
 
 // --- Stack setup ---
 const STACK_LIMIT = 10; // Maximum stack size
 const stack = [];
-let top = -1; // Index of the top element
+let topIndex = -1; // Index of the top element
 
 // --- Push operation ---
 function push(value) {
   // TODO: Fill in the blank to add value to the stack
-  if (top >= STACK_LIMIT - 1) {
+  if (topIndex >= STACK_LIMIT - 1) {
     // Stack is full
     return -1;
   } else {
-    top = top + 1;
-    stack[top] = ___________;
-    return top;
+    topIndex = topIndex + 1;
+    stack[topIndex] = value;
+    return topIndex;
   }
 }
 
 // --- Pop operation ---
 function pop() {
   // TODO: Fill in the blank to remove and return the top value
-  if (top === -1) {
+  if (topIndex === -1) {
     // Stack is empty
     return -1;
   } else {
-    var popped = stack[top];
-    stack[top] = ___________;
-    top = top - 1;
+    var popped = stack[topIndex];
+    stack[topIndex] = value;
+    topIndex = topIndex - 1;
     return popped;
   }
 }
 
 // --- Peek operation ---
 function peek() {
-  if (top >= 0) {
-    return stack[top];
+  if (topIndex >= 0) {
+    return stack[topIndex];
   } else {
     return -1;
   }
@@ -46,18 +49,18 @@ function peek() {
 // --- Clear operation ---
 function clear() {
   var i = 0;
-  while (i <= top) {
+  while (i <= topIndex) {
     stack[i] = undefined;
     i = i + 1;
   }
-  top = -1;
+  topIndex = -1;
 }
 
 // --- Display stack contents ---
 function updateOutput() {
   var contents = [];
   var i = 0;
-  while (i <= top) {
+  while (i <= topIndex) {
     contents.push(stack[i]);
     i = i + 1;
   }
