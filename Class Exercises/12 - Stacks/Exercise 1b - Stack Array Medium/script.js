@@ -14,8 +14,8 @@ function push(value) {
     // Stack is full
     return -1;
   } else {
-    top = ___________;
-    stack[top] = ___________;
+    topIndex = topIndex + 1;
+    stack[top] = topIndex;
     return top;
   }
 }
@@ -23,13 +23,13 @@ function push(value) {
 // --- Pop operation ---
 function pop() {
   // TODO: Fill in the blanks to complete the pop logic
-  if (___________) {
+  if (topIndex === -1) {
     // Stack is empty
     return -1;
   } else {
-    var popped = ___________;
-    stack[top] = ___________;
-    top = ___________;
+    var popped = stack[topIndex];
+    stack[topIndex] = undefined;
+    top = topIndex - 1;
     return popped;
   }
 }

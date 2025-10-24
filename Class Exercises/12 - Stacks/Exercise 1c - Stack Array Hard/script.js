@@ -5,30 +5,30 @@
 // --- Stack setup ---
 const STACK_LIMIT = 10; // Maximum stack size
 const stack = [];
-let top = -1; // Index of the top element
+let topIndex = -1; // Index of the top element
 
 // --- Push operation ---
 function push(value) {
   // TODO: Fill in all the blanks to write the push algorithm
-  if (___________) {
-    return ___________;
+  if (topIndex >= STACK_LIMIT -1) {
+    return -1;
   } else {
-    ___________;
-    ___________;
-    return ___________;
+    topIndex = topIndex + 1;
+    stack[topIndex] = value;
+    return topIndex;
   }
 }
 
 // --- Pop operation ---
 function pop() {
   // TODO: Fill in all the blanks to write the pop algorithm
-  if (___________) {
-    return ___________;
+  if (topIndex === -1) {
+    return -1;
   } else {
-    var popped = ___________;
-    ___________;
-    ___________;
-    return ___________;
+    var popped = stack[topIndex];
+    stack[topIndex] = undefined;
+    topIndex = topIndex - 1;
+    return popped;
   }
 }
 
