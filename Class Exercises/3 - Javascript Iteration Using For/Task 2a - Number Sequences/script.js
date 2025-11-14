@@ -17,10 +17,22 @@ document.addEventListener('DOMContentLoaded', function() {
 // Function to generate number sequence
 function generateSequence() {
     // TODO: Get the maximum number and sequence type from inputs
-    
+    max = document.getElementById('maxNumber').value;
+    type = document.getElementById('sequenceType').value;
     // TODO: Initialize array to store sequence
-    
+    sequence = []
     // TODO: Generate sequence based on type selected:
+    If (type === 'countUp') {
+
+    } else if (type === 'countDown') {
+
+    } else if (type === 'steps') {
+
+    } else if (type === 'even') {
+
+    } else if (type === 'odd') {
+
+    }
     // countUp: Use a for loop counting from 1 to N
     // countDown: Use a for loop counting from N down to 1
     // steps: Use a for loop with custom step value

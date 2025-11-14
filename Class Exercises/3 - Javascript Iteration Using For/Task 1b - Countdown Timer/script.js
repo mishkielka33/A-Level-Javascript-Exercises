@@ -10,10 +10,13 @@ function startCountdown() {
     
     // TODO: Validate inputs
     // Check if values are valid numbers
+    if (startNum > 1 && delay > 100) {
     // Check if start number is positive
     // Check if delay is at least 100ms
     
+    
     // TODO: Disable button during countdown
+    }
     
     // TODO: Create the countdown loop
     // Use a for loop counting backwards
