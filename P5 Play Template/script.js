@@ -3,19 +3,21 @@ let smiley;
 function setup() {
 	new Canvas(500, 400);
 	let smileText = `
-..yyyyyy
-.yybyybyy
-yyyyyyyyyy
-yybyyyybyy
-.yybbbbyy
-..yyyyyy`;
+..yyy
+.yyyyy
+yyyyyyy
+yyyyyyy
+.yyyyy
+..yyy`;
 
 	smiley = new Sprite();
 	smiley.img = spriteArt(smileText, 32);
 } 
 
 function draw() {
-    if (kb.pressing('space') || mouse.pressing()) {
-        smiley.x = smiley.x + 1;
-    }   
+    if (kb.pressing('up')) {
+        smiley.scale *= 1.05;
+	} else if (kb.pressing('down')) {
+		smiley.scale *= 0.9;
+	}
 }
