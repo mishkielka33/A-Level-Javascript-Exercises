@@ -1,23 +1,21 @@
-let smiley;
+let block;
+let floor;
+let ball;
 
 function setup() {
-	new Canvas(500, 400);
-	let smileText = `
-..yyy
-.yyyyy
-yyyyyyy
-yyyyyyy
-.yyyyy
-..yyy`;
+	new Canvas(1000, 600);
+	 block = new Sprite(350, 300, 50, 50, DYN);
+	 floor = new Sprite(500, 350, 1000, 10, DYN);
+	 floor.rotationSpeed = 1;
+	 world.gravity.y = 9.81;
 
-	smiley = new Sprite();
-	smiley.img = spriteArt(smileText, 32);
 } 
 
-function draw() {
-    if (kb.pressing('up')) {
-        smiley.scale *= 1.05;
-	} else if (kb.pressing('down')) {
-		smiley.scale *= 0.9;
-	}
-}
+function update() {
+	if (mouse.presses()) {
+		block.x = mouse.x;
+		block.y = mouse.y;
+		let ball = (50)
+	};
+	clear()
+}; 
