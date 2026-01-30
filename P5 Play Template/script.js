@@ -1,6 +1,9 @@
-let block;
+let player;
 let floor;
-let ball; 
+let ceiling;
+let leftWall;
+let rightWall;
+let pointBox;
 let points = 0;
 
 function preload() {
@@ -8,27 +11,35 @@ function preload() {
 
 function setup() {
 	new Canvas(1000, 600);
-	 block = new Sprite(350, 300, 50, 50, DYN);
+	 player = new Sprite(350, 300, 50, 50, DYN);
 	 ball = new Sprite(200, 200, 30, DYN); 
 	 floor = new Sprite(500, 600, 1000, 10, STA);
+	 ceiling = new Sprite(500, 1, 1000, 10, STA);
+	 leftWall = new Sprite(0, 300, 10, 1000, STA);
+	 rightWall = new Sprite(1000, 300, 10, 1000, STA);
 	 world.gravity.y = 9.81;
-	 block.bounciness = 1;
-	//block.rotationSpeed = 3;
+	 pointBox = new Sprite(55, 30, 100, 50, STA);
+	 pointBox.textSize = 40;
+	 pointBox.text = points;
+	 ball.bounciness = 1;
+	//player.rotationSpeed = 3;
 } 
 
 function controls() {
-	block.moveTowards(mouse, 0.10);
+	player.moveTowards(mouse, 0.10);
 }
 
-function draw () {
-	
-}
 
 function update() {
-	clear()
-	block.moveTowards(mouse, 0.5);
-	if (block.collides(floor)) {
+	clear();
+	player.moveTowards(mouse, 0.5);
+	if (player.collides(ball)) {
 		points = points + 1
-	}
+		pointBox.text = points;
 	};
+	if (ball.collides(floor)) {
+		points = 0
+		pointBox.text = points;
+	}
+};
  
