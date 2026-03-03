@@ -23,14 +23,14 @@ document.addEventListener("DOMContentLoaded", function () {
     function studentSearch(array, target) {
         let foundIndex = -1;
         let currentIndex = 0;
-        while (currentIndex < array.______ && foundIndex == -1) {
-            if (array[_____] === target) {
-                foundIndex = _____;
+        while (currentIndex < array.length && foundIndex == -1) {
+            if (array[currentIndex] === target) {
+                foundIndex = currentIndex;
             } else {
             currentIndex++;
             }
         }
-        return _____;
+        return foundIndex;
     }
     
 
