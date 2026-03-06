@@ -10,8 +10,7 @@ let level = 1;
 let goal1;
 let goal2;
 
-function preload() {
-}
+
 
 function setup() {
 	new Canvas(1000, 600);
@@ -47,6 +46,10 @@ function levels() {
 	}
 }
 
+function goals() {
+
+}
+
 
 function controls() {
 	player.moveTowards(mouse, 0.10);
@@ -67,10 +70,10 @@ function update() {
 		ball.overlaps(pointBox);
 		ball.overlaps(levelBox);
 	}
-
+}
 	//Levels
 
-		if (points < 30) {
+/*		if (points < 30) {
 	level = 1; 
 	levelBox.text = `Level ${level}`
 }
@@ -92,5 +95,6 @@ function update() {
 		
 	}
 	}
-};
+}; 
+*/ 
  
