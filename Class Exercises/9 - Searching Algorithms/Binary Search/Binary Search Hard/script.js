@@ -25,21 +25,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function studentSearch(array, target) {
-        let _____ = 0;
-        let _____ = array.length - 1;
-    
-        while (______________________) {
-            let mid = _______________________;
-            if (__________________________) {
-                return _____;
-            } else if (__________________________) {
-                _____ = _____ + 1;
+        let left = 0;
+        let right = array.length - 1;
+
+        while (left <= right) {
+            let mid = Math.floor((left + right) / 2);
+            if (array[mid] == target) {
+                return mid;
+            } else if (array[mid] > target) {
+                right = mid - 1;
             } else {
-                _____ = _____ - 1;
+                left = mid + 1;
             }
         }
-    
-        return _____;
+        return -1;
     }
     
     
