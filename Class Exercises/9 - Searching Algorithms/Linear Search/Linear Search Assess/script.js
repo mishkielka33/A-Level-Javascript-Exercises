@@ -24,18 +24,16 @@ document.addEventListener("DOMContentLoaded", function () {
     //The array to be searched and the item searched for
     //return the index position of the item if found or -1 if not
 
-    function studentSearch(array, target){
-    let foundIndex = -1;
-    let currentIndex = 0;
-    while(currentIndex < array.length && foundIndex == -1){
-        if(array[currentIndex] == target){
-            foundIndex = currentIndex;
-        }
-        else {
+    function studentSearch(array, target) {
+        let foundIndex = -1;
+        let currentIndex = 0
+        while (currentIndex <= array.length - 1 && foundIndex == -1) {
+            if (array[currentIndex] == target) {
+                foundIndex = currentIndex;
+            }
             currentIndex++
         }
-    }
-    return foundIndex
+        return foundIndex
     }
 
     generateButton.addEventListener("click", function () {

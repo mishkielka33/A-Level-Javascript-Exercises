@@ -28,22 +28,20 @@ document.addEventListener("DOMContentLoaded", function () {
     //return the index position of the item if found or -1 if not
 
     function studentSearch(array, target) {
-        let left = 0
-        let right = array.length - 1
-
-        while(left <= right) {
+        let left = 0;
+        let right = array.length - 1;
+        while (left <= right) {
             mid = Math.floor((left + right) / 2)
             if (array[mid] == target) {
-                return mid 
-            } else if (array[mid] < target) {
-                left = mid + 1
-            } else {
+                return mid
+            } else if (array[mid] > target){
                 right = mid - 1
+            } else {
+                left = mid + 1
             }
         }
         return -1
     }
-    
 
     generateButton.addEventListener("click", function () {
         currentArray = generateRandomArray();
