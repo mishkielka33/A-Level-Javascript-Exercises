@@ -4,6 +4,23 @@
   font-weight: 100;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* nav bar */
+#nav {
+  position: fixed;
+  background-color: #d2bcd4;
+  padding: 14px 16px;
+}
+
+#title {
+  font-size: 30px;
+  text-decoration: none;
+}
+
 /* menu button */
 .menu-button {
   font-size: 100;
@@ -45,4 +62,4 @@
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .menu-button {background-color: #ffffff;}
