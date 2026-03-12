@@ -1,0 +1,37 @@
+/*setup*/
+*  {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-color: 
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* full page tab */
+body, html {
+   height: 100%;
+   margin: 0;
+}
+
+
+/* style tab links */
+.tablink {
+   background-color: background-color: #f5edfa;
+   colour: black;
+   float: left;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   padding: 14px 16px;
+   font-size: 17px;
+   width: 33%;
+}
+
+.tablink:hover {
+   background-color: #ddd;
+}
