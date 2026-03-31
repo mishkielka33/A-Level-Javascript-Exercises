@@ -1,0 +1,226 @@
+/*setup*/
+*  {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
+.slideshow {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.slide {
+  display:none
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next-hover {
+  background-color: rgba(0,0,0,0.8)
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.number {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6 ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* nav bar */
+header {
+  position: relative;
+  background-color: #ADBFD7;
+  padding: 14px 16px;
+  width: 100%;
+}
+
+#title {
+  font-size: 30px;
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #000000;
+  float: left;
+}
+
+.head {
+  font-size: 30px;
+  text-decoration: none;
+  padding: 10px 30px;
+  color: #000000;
+  float: middle;
+  text-align: center;
+}
+
+
+
+/* menu button */
+.menu-button {
+  font-size: 100;
+  background-color: #dee1e7;
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border-color: #8c8991;
+}
+
+/* positioning dropdown content*/
+.dropdown {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+/* hides content by default */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #CED2DE;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+ color: black;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+}
+
+/* change the title on hover*/
+#title:hover {background-color: #97A0BA;}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .menu-button {background-color: #ffffff;}
+
+/* hide tablinks when button is hovered */
+#nav:hover {z-index: 1;}
+
+
+
+/*-------------------------------------------------------------------------------------------------------------*/
+
+
+
+/* full page tab */
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* style tab links */
+.tablink {
+  position: relative;
+  background-color: #ADBFD7;
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+  vertical-align: middle;
+}
+
+.tablink:hover {
+  background-color: #f0dbf1;
+}
+
+/* style tab content (height: x% is the page content) */
+.tabcontent {
+   color: black;
+   display: none;
+   padding: 100px 20px;
+   height: 100%;
+}
+
+/* change tab colours on hover */
+.tablink:hover {background-color: 5D4A5E;}
+
+#Description {background-color:#d2bcd4;}
+
+#Location {background-color: #d2bcd4;}
+
+#Significance {background-color: #d2bcd4;}
+
+#Pictures {background-color: #d2bcd4;}
+
+/* #bfe3f146 */
